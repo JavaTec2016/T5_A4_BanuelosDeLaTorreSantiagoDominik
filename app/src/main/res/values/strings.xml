@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">T5_A4_BanuelosDeLaTorreSantiagoDominik</string>
+    <string name="txtConversor">CONVERSOR</string>
+
+    <string name="radioDecimal">Decimal</string>
+    <string name="radioBinario">Binario</string>
+    <string name="radioOctal">Octal</string>
+    <string name="radioHexadecimal">Hexadecimal</string>
+    <string name="ingresaNumero">Ingresa numero: </string>
+</resources>

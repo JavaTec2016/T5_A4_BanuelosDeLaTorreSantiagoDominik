@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtConversor"
+        android:layout_width="143dp"
+        android:layout_height="30dp"
+        android:text="@string/txtConversor"
+        android:textAlignment="center"
+        android:textColor="#FF5900"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.110000014" />
+
+    <RadioGroup
+        android:id="@+id/groupOpciones"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtConversor"
+        app:layout_constraintVertical_bias="0.110000014">
+
+        <RadioButton
+            android:id="@+id/radioDecimal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="establecerBase"
+            android:text="@string/radioDecimal" />
+
+        <RadioButton
+            android:id="@+id/radioBinario"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:onClick="establecerBase"
+            android:text="@string/radioBinario" />
+
+        <RadioButton
+            android:id="@+id/radioOctal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="establecerBase"
+            android:text="@string/radioOctal" />
+
+        <RadioButton
+            android:id="@+id/radioHexadecimal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="establecerBase"
+            android:text="@string/radioHexadecimal" />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/cajaBinario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="64dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintStart_toEndOf="@+id/checkBinario"
+        app:layout_constraintTop_toBottomOf="@+id/txtNumero" />
+
+    <EditText
+        android:id="@+id/cajaHexadecimal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintStart_toEndOf="@+id/checkHexadecimal"
+        app:layout_constraintTop_toBottomOf="@+id/cajaOctal" />
+
+    <TextView
+        android:id="@+id/txtNumero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ingresaNumero"
+        android:textAlignment="center"
+        android:textColor="#007BFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.207"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/groupOpciones"
+        app:layout_constraintVertical_bias="0.069" />
+
+    <CheckBox
+        android:id="@+id/checkOctal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:onClick="Convertir"
+        android:text="@string/radioOctal"
+        android:textColor="#699E53"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBinario" />
+
+    <CheckBox
+        android:id="@+id/checkBinario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="66dp"
+        android:layout_marginEnd="280dp"
+        android:layout_marginBottom="21dp"
+        android:onClick="Convertir"
+        android:text="@string/radioBinario"
+        android:textColor="#699E53"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/checkOctal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNumero" />
+
+    <CheckBox
+        android:id="@+id/checkHexadecimal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:onClick="Convertir"
+        android:text="@string/radioHexadecimal"
+        android:textColor="#699E53"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkOctal" />
+
+    <EditText
+        android:id="@+id/cajaOctal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintStart_toEndOf="@+id/checkOctal"
+        app:layout_constraintTop_toBottomOf="@+id/cajaBinario" />
+
+    <EditText
+        android:id="@+id/cajaNum"
+        android:layout_width="393dp"
+        android:layout_height="53dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/cajaBinario"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNumero" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
